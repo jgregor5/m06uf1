@@ -18,6 +18,7 @@ class FileDemo {
     }
 
     public static void main(String args[]) {
+        // use this or another exising file
         File f1 = new File("/java/COPYRIGHT");
         p("File Name: " + f1.getName());
         p("Path: " + f1.getPath());
