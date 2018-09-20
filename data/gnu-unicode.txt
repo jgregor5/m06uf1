@@ -1,0 +1,7 @@
+✉ Un troç de GNU...
+
+El Programari Lliure és un afer de la llibertat del usuaris per a executar, copiar, distribuir, estudiar, canviar i millorar el programari. Més precisament, es refereix a quatre tipus de llibertat, per a usuaris de programari:
+➜ La llibertat per a executar el programa, per a qualsevol propòsit (llibertat 0).
+➜ La llibertat d'estudiar com treballa el programa, i adaptar-lo a les necessitats pròpies (llibertat 1). L'accés al codi font es una condició prèvia per a això.
+➜ La llibertat de redistribuir còpies per a poder ajudar als vostres veïns (llibertat 2).
+➜ La llibertat per a millorar el programa, i alliberar les vostres millores al públic, per a què tota la comunitat pugui beneficiar-se (llibertat 3). L'accés al codi font és una condició prèvia per a això.
