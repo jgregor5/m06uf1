@@ -5,6 +5,8 @@
  */
 package tests;
 
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
@@ -13,23 +15,26 @@ import java.io.IOException;
  */
 public class WritePot2 {
     
+    private String name;
+    
     public WritePot2(String filename) {        
-        
+        this.name = filename;
     }
     
     public boolean write() throws IOException {
-        return false;
-    }
-    
-    public static void main(String[] args) {
         
-        try {
-            boolean wrote = new WritePot2("data/pot2.dat").write();
-            System.out.println(wrote? "wrote it" : "could not write it");
-            
-        } catch (IOException e) {
-            System.out.println("failed to write it");
-            e.printStackTrace();
+        FileOutputStream fos = new FileOutputStream(this.name);
+        DataOutputStream dos = new DataOutputStream(fos);
+        
+        long num = 1L;
+        for (int i=0; i<64; i++) {
+            dos.writeLong(num);
+            num *= 2;
         }
+        
+        dos.close();
+        fos.close();
+        
+        return true;
     }
 }
