@@ -6,6 +6,8 @@
 package tests;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 
 /**
  *
@@ -13,9 +15,15 @@ import java.io.File;
  */
 public class FilePathTest {
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         
-        File f = new File("C:\\data\\arxiu.txt");
+        String nombre = "C:\\data\\arxiu.txt";
+        
+        File f = new File(nombre);
+        boolean existe = f.exists();
+        
+        System.out.println(existe? "SI" : "NO");
+        
         System.out.println("name " + f.getName());
         System.out.println("parent " + f.getParent());
         
