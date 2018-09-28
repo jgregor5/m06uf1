@@ -41,7 +41,7 @@ public class FamilySAXParser extends DefaultHandler {
     @Override
     public void characters(char ch[], int start, int length)
             throws SAXException {
-        System.out.println("characters : " + new String(ch, start, length));
+        System.out.println("characters       : " + new String(ch, start, length));
     }
 
     public static void main(String[] args) {
