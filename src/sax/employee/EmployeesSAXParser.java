@@ -23,7 +23,7 @@ public class EmployeesSAXParser {
             SAXParser saxParser = saxParserFactory.newSAXParser();
             
             // build the handler
-            EmployeesHandler handler = new EmployeesHandler(false);
+            EmployeesHandler handler = new EmployeesHandler(true);
             
             // parse
             saxParser.parse(new File("data/employees.xml"), handler);
