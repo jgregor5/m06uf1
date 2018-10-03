@@ -13,6 +13,9 @@ import org.xml.sax.helpers.DefaultHandler;
  * @author julian
  */
 public class FamilySAXParser extends DefaultHandler {
+    
+    public FamilySAXParser() {
+    }
 
     @Override
     public void startDocument() throws SAXException {
@@ -42,20 +45,5 @@ public class FamilySAXParser extends DefaultHandler {
     public void characters(char ch[], int start, int length)
             throws SAXException {
         System.out.println("characters       : " + new String(ch, start, length));
-    }
-
-    public static void main(String[] args) {
-        SAXParserFactory factory = SAXParserFactory.newInstance();
-        try {
-
-            InputStream xmlInput = new FileInputStream("data/family.xml");
-            SAXParser saxParser = factory.newSAXParser();
-
-            DefaultHandler handler = new FamilySAXParser();
-            saxParser.parse(xmlInput, handler);
-
-        } catch (Throwable err) {
-            err.printStackTrace();
-        }
     }
 }
